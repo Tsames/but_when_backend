@@ -9,8 +9,8 @@ class CreateEvents < ActiveRecord::Migration[6.1]
       t.time :time_range_start
       t.time :time_range_end
       t.integer :organizer
-      t.string :attendees, array: true, default: []
-      t.string :availabilities, array: true, default: []
+      t.string :attendees
+      t.string :availabilities
 
       t.timestamps
     end
