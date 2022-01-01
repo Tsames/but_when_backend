@@ -16,11 +16,12 @@ ActiveRecord::Schema.define(version: 2021_12_30_210544) do
   enable_extension "plpgsql"
 
   create_table "availabilities", force: :cascade do |t|
-    t.integer "user"
-    t.integer "event"
-    t.string "data", default: [], array: true
+    t.bigint "event_id"
+    t.string "name"
+    t.string "data"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["event_id"], name: "index_availabilities_on_event_id"
   end
 
   create_table "events", force: :cascade do |t|
@@ -31,11 +32,9 @@ ActiveRecord::Schema.define(version: 2021_12_30_210544) do
     t.date "day_range_end"
     t.time "time_range_start"
     t.time "time_range_end"
-    t.integer "organizer"
-    t.string "attendees", default: [], array: true
-    t.string "availabilities", default: [], array: true
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "availabilities", "events"
 end

@@ -1,8 +1,8 @@
 class CreateAvailabilities < ActiveRecord::Migration[6.1]
   def change
     create_table :availabilities do |t|
-      t.integer :user
-      t.integer :event
+      t.belongs_to :event, index: true, foreign_key: true
+      t.string :name
       t.string :data
 
       t.timestamps
