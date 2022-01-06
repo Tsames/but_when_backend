@@ -1,5 +1,6 @@
 class AvailabilitiesController < ApplicationController
   before_action :set_availability, only: [:show, :update, :destroy]
+  before_action :authorized, only: [:update, :destroy]
 
   # GET /availabilities
   def index
