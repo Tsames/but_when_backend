@@ -6,5 +6,4 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-user = User.create(username: "test", password: "test", name: "tom")
 event = Event.create(title: "example event", location: "1234 Default Ln", description: "This is a seeded example event.")
