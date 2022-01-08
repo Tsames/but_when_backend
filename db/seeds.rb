@@ -8,9 +8,9 @@
 
 lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 
-eventOne = Event.create(title: "Pie Eating Contest", location: "1234 Default Ln", description: lorem, day_range_start: Date.new(2021, 1, 9), day_range_end: Date.new(2021,1,12))
-eventTwo = Event.create(title: "Delightful Picnic", location: "Generic Park", description: lorem, day_range_start: Date.new(2021, 1, 22), day_range_end: Date.new(2021,1,29))
-eventThree = Event.create(title: "Thumb War Royale", location: "New York, NY", description: lorem, day_range_start: Date.new(2021, 1, 1), day_range_end: Date.new(2021,1,30))
-eventFour = Event.create(title: "A Covid Superspreader Near You", location: lorem, day_range_start: Date.new(2021, 3, 1), day_range_end: Date.new(2021,4,1))
-eventFive = Event.create(title: "Graduating from GA", location: "Online", description: lorem, day_range_start: Date.new(2021, 1,29), day_range_end: Date.new(2021,1,30))
+eventOne = Event.create(title: "Pie Eating Contest", location: "1234 Default Ln", description: lorem, day_range_start: "1/2/2022", day_range_end: "1/3/2022")
+eventTwo = Event.create(title: "Delightful Picnic", location: "Generic Park", description: lorem, day_range_start: "1/15/2022", day_range_end: "1/22/2022")
+eventThree = Event.create(title: "Thumb War Royale", location: "New York, NY", description: lorem, day_range_start: "3/4/2022", day_range_end: "3/19/2022")
+eventFour = Event.create(title: "A Covid Superspreader Near You", location: lorem, day_range_start: "5/9/2022", day_range_end: "5/11/2022")
+eventFive = Event.create(title: "Graduating from GA", location: "Online", description: lorem, day_range_start: "1/29/22", day_range_end: "1/30/22")
 availability = Availability.create(event_id: 2, name: "tom", data: "always")
